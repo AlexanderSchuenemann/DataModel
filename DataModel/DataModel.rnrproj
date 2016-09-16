@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <Configuration>Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <Model>DataModel</Model>
+    <DBSyncInBuild>False</DBSyncInBuild>
+    <GenerateFormAdaptors>False</GenerateFormAdaptors>
+    <Company>
+    </Company>
+    <Partition>initial</Partition>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <OutputPath>bin</OutputPath>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <DataEntityExpandParentChildRelations>False</DataEntityExpandParentChildRelations>
+    <DataEntityUseLabelTextAsFieldName>False</DataEntityUseLabelTextAsFieldName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ProjectGuid>{34c1d618-f0f3-4f0f-b33a-76f4bf49a079}</ProjectGuid>
+    <Name>DataModel</Name>
+    <RootNamespace>DataModel</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="EDT Dates\" />
+    <Folder Include="EDT Reals\" />
+    <Folder Include="Forms\" />
+    <Folder Include="Label Files\" />
+    <Folder Include="Tables\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AxEdt\RD_ITO_Cloud_Period">
+      <SubType>Content</SubType>
+      <Name>RD_ITO_Cloud_Period</Name>
+      <Link>EDT Reals\RD_ITO_Cloud_Period</Link>
+    </Content>
+    <Content Include="AxEdt\RD_ITO_Cloud_Turnover">
+      <SubType>Content</SubType>
+      <Name>RD_ITO_Cloud_Turnover</Name>
+      <Link>EDT Reals\RD_ITO_Cloud_Turnover</Link>
+    </Content>
+    <Content Include="AxEdt\RD_LicensePeriod">
+      <SubType>Content</SubType>
+      <Name>RD_LicensePeriod</Name>
+      <Link>EDT Reals\RD_LicensePeriod</Link>
+    </Content>
+    <Content Include="AxEdt\RD_LicenseTurnover">
+      <SubType>Content</SubType>
+      <Name>RD_LicenseTurnover</Name>
+      <Link>EDT Reals\RD_LicenseTurnover</Link>
+    </Content>
+    <Content Include="AxEdt\RD_MaintenancePeriod">
+      <SubType>Content</SubType>
+      <Name>RD_MaintenancePeriod</Name>
+      <Link>EDT Reals\RD_MaintenancePeriod</Link>
+    </Content>
+    <Content Include="AxEdt\RD_MaintenanceTurnover">
+      <SubType>Content</SubType>
+      <Name>RD_MaintenanceTurnover</Name>
+      <Link>EDT Reals\RD_MaintenanceTurnover</Link>
+    </Content>
+    <Content Include="AxEdt\RD_PrognosisDate">
+      <SubType>Content</SubType>
+      <Name>RD_PrognosisDate</Name>
+      <Link>EDT Dates\RD_PrognosisDate</Link>
+    </Content>
+    <Content Include="AxEdt\RD_ServicePeriod">
+      <SubType>Content</SubType>
+      <Name>RD_ServicePeriod</Name>
+      <Link>EDT Reals\RD_ServicePeriod</Link>
+    </Content>
+    <Content Include="AxEdt\RD_ServiceTurnover">
+      <SubType>Content</SubType>
+      <Name>RD_ServiceTurnover</Name>
+      <Link>EDT Reals\RD_ServiceTurnover</Link>
+    </Content>
+    <Content Include="AxEdt\RD_TurnoverTotal">
+      <SubType>Content</SubType>
+      <Name>RD_TurnoverTotal</Name>
+      <Link>EDT Reals\RD_TurnoverTotal</Link>
+    </Content>
+    <Content Include="AxForm\smmOpportunityTable">
+      <SubType>Content</SubType>
+      <Name>smmOpportunityTable</Name>
+      <Link>Forms\smmOpportunityTable</Link>
+    </Content>
+    <Content Include="AxLabelFile\RD_Label_de">
+      <SubType>Content</SubType>
+      <Name>RD_Label_de</Name>
+      <Link>Label Files\RD_Label_de</Link>
+    </Content>
+    <Content Include="AxLabelFile\RD_Label_en-US">
+      <SubType>Content</SubType>
+      <Name>RD_Label_en-US</Name>
+      <Link>Label Files\RD_Label_en-US</Link>
+    </Content>
+    <Content Include="AxTable\smmOpportunityTable">
+      <SubType>Content</SubType>
+      <Name>smmOpportunityTable</Name>
+      <Link>Tables\smmOpportunityTable</Link>
+    </Content>
+    <Content Include="RD_Label.de.label.txt">
+      <SubType>Content</SubType>
+      <Name>RD_Label.de.label.txt</Name>
+      <DependentUpon>AxLabelFile\RD_Label_de</DependentUpon>
+    </Content>
+    <Content Include="RD_Label.en-US.label.txt">
+      <SubType>Content</SubType>
+      <Name>RD_Label.en-US.label.txt</Name>
+      <DependentUpon>AxLabelFile\RD_Label_en-US</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.Common.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Dynamics\AX\Microsoft.Dynamics.Framework.Tools.BuildTasks.targets" />
+</Project>
